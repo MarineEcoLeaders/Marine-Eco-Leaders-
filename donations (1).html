@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Marine Eco Donations Page </title>
+
+<style type="text/css">
+
+* {
+margin:0;
+padding:0; } 
+
+body {
+background-image: url('images/bp.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover; }
+
+.banner {
+width:100%;
+height:150px;}
+
+	.leftbannertitle {
+	float: left;
+	text-align: center;
+	width: 20%;
+	height: 150px; 
+	}
+
+	.bannertitle {
+	float: left;
+	width: 61% ;
+	height: 86px;
+	padding-top: 32px;
+	padding-bottom: 32px; 
+	}
+
+	.rightbannertitle {
+	float: left;
+	width: 18%;
+	height: 150px; }
+	
+	.logoresize {
+	width: 38%; }
+	
+	.titleresize {
+	width: 96%; }
+
+		.searchbar {
+		width: 67.5%;
+		margin-top: 60px;
+		height: 40px; }
+			
+				.searchareamain {
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 40px;
+				background-color: royalblue;
+				width: 100%;
+				border-radius: 20px;
+				background-image: url('search.png');
+				background-repeat: no-repeat;
+				background-position: 97% 50%; }
+				
+					.searchareawhite {
+					float: left;
+					height: 30px;
+					width: 96.5%;
+					border-radius: 20px;
+					background-color: white;
+					margin-top: 5px;
+					margin-left: 4px; }
+		
+					.searchareawhite input{
+					float: left;
+					height: 20px;
+					padding-top: 4px;
+					border: 0px;
+					width: 100%;
+					margin-left: 5px;
+					text-align: center;
+					font-size: 1.0vw;
+					font-family:calibri;
+					color: black;
+					background-color: white; }
+
+
+.navbar {
+width:900px;
+height:30px;
+margin:auto;
+}
+
+	.button {
+	width:150px;
+	float: left;
+	height:30px;
+	font-size: 1.9vw;
+	font-family: serifboldtimesnewroman;
+	text-align: center;
+	line-height: 30px ;
+	color: darkblue;
+	font-weight: bold;
+	}
+
+	.button:hover {
+	color: darkred;
+	font-weight: bold;}
+
+.mainarea{
+width: 1200px;
+height: 400px;
+margin: auto;
+margin-top: 50px;
+margin-bottom: 50px; }
+
+.leftcontent {
+width: 480px;
+height: 400px;
+background-color:lightblue;
+float: left;
+font-size: 15;
+font-family:arial;
+}
+
+.rightcontent {
+width:700px;
+height: 380px;
+padding:10px;
+float: left;
+}
+ 
+.donation-container {
+	height: 400px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 1px;
+}
+
+.donation-box {
+	width: 390px;
+	height: 386px;
+	background-color: #F5F5F5;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+.donation-box .title {
+	background-color: #C1D82F;
+	width: 100%;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: white;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 19px;
+}
+
+.donation-box .donate-button {
+	background-color: #C1D82F;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 18px;
+	bottom: 0px;
+	position: absolute;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.donation-box .fields {
+	width: 59%;
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 15px;
+}
+
+.donation-box .fields input {
+	width: 90%;
+	font-size: 17px;
+	padding: 10px;
+	border-radius: 4px;
+	border-width: 0px;
+	color: #5C5C5C;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	margin-bottom: 10px;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-webkit-input-placeholder {
+   color: #cdcdcd;
+   font-size: 15px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cdcdcd;
+   font-size: 15px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #cdcdcd;
+   font-size: 15px; 
+}
+
+:-ms-input-placeholder {  
+   color: #cdcdcd;
+   font-size: 15px;
+}
+
+.donation-box .amount {
+	width: 30%;
+	display: block;
+	position: absolute;
+	top: 60px;
+	right: 15px;
+}
+
+.donation-box .amount .button {
+	width: 100%;
+	background-color: gray;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
+	padding: 15px 0px 15px 0px;
+	border-radius: 4px;
+	font-size: 20px;
+	cursor: pointer;
+	
+	-webkit-transition: 400ms background-color;
+	-moz-transition: 800ms opacity, 800ms right;
+	-ms-transition: 800ms opacity, 800ms right;
+	-o-transition: 800ms opacity, 800ms right;
+	transition: 200ms background-color;
+}
+
+.donation-box .amount .button:hover {
+	background-color: #393939;
+}
+
+.donation-box .amount .button.selected {
+	background-color: #393939;
+}
+
+.donation-box .amount .button input {
+	min-width: 34px;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-family: Montserrat, sans-serif;
+	font-size: 20px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	border-bottom: 2px dashed white;
+	-webkit-font-smoothing: antialiased;
+	
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+.set-amount {
+	max-width: 96px;
+}
+
+.switch {
+  position: absolute;
+  top: 190px;
+  left: 15px;
+  margin: 20px auto;
+  height: 26px;
+  width: 58.5%;
+  background: white;
+  border-radius: 3px;
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 49%;
+  line-height: 26px;
+  font-size: 11px;
+  color: #5C5C5C;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.switch-label:active {
+  font-weight: bold;
+}
+
+.switch-label-off {
+  padding-left: 2px;
+}
+
+.switch-label-on {
+  padding-right: 2px;
+}
+
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+  
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 114px;
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 49%;
+  height: 22px;
+  background: #65bd63;
+  border-radius: 3px;
+  background-color: #C1D82F;
+  
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.checkboxes {
+	position: absolute;
+	top: 242px;
+	left: 13px;
+}
+
+.checkboxes label {
+	position: relative;
+	top: -8px;
+	font-size: 13px;
+	color: gray;
+}
+
+.checkbox {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #C1D82F;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+.checkbox:active, .checkbox:checked:active {
+	
+}
+
+.checkbox:checked {
+	background-color: #C1D82F;
+	border: 1px solid #C1D82F;
+	color: white;
+}
+
+.checkbox:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: white;
+}
+
+.confirm {
+	display: none;
+	position: absolute;
+	top: 335px;
+	left: 15px;
+	right: 15px;
+	font-size: 16px;
+	
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+.confirm i {
+	font-weight: bold;
+	text-decoration: underline;
+	font-style: normal;
+}
+
+.footercontainer {
+width: 100%;
+border-top: 2px solid darkblue;
+height: 100px;
+background-color: lightblue;
+position: fixed;
+bottom: 0; }
+
+.leftfooter {
+float: left;
+text-align: left;
+background-color: lightblue;
+width: 18%;
+color: black;
+font-size: 1.0vw;
+height: 95px;
+padding-top: 5px;
+padding-left: 2%;
+font-family:arial }
+
+.leftfooter a {
+text-decoration: none;
+color: black; }
+
+.footermain {
+float: left;
+width: 60%;
+color: black;
+text-align: center;
+padding-top: 10px;
+font-size: 1.3vw;
+background-color: skyblue;
+height: 86px;
+font-family:arial}
+
+.rightfooter {
+float: left;
+text-align: center;
+background-color: lightblue;
+width: 20%;
+height: 100px; }
+
+.upperright {
+text-align: center;
+padding-top: 10px;
+width: 100%;
+height: 23px; }
+
+.lowerright {
+text-align: center;
+padding-top: 10px;
+width: 100%;
+height: 100px; }
+
+<h1> {
+text-align: center;
+font-size: 1vw; }
+
+<p> {
+text-align: center;
+font-size: 1vw;}
+
+.certs {
+margin-top: 50px;
+width: 100%;
+text-align: center; }
+
+</style>
+
+
+</head>
+
+<script> var firstName = "";
+		var lastName = "";
+		var email = "";
+		var dType = "";
+		var receipt = "";
+		var anon = "";
+		var list = "";
+		var amount = "";
+		
+		£('.set-amount').autoGrow(0);
+		
+		/*
+			if(isiPad || jQuery.browser.mobile){
+				£('#team').hide()
+				£('.team-mobile').show();	
+			}else{
+				£('#team').show()
+				£('.team-mobile').hide();
+			}
+		*/
+		
+		//Set & Highlight Donation Amount
+		£(".button").click(function(){
+			£(".button").removeClass("selected");
+			£(this).addClass("selected");
+			
+			£(this).find("input").focus();
+		});
+		
+		//Grow the donation box if they type more than 4 numbers
+		£(".set-amount").keyup(function(){
+			
+			if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
+		       this.value = this.value.replace(/[^0-9\.]/g, '');
+		    }
+
+		});
+		
+		
+		£("input").on("change", function(){
+			// £(".donation-box").css("height", "500px");
+			
+			firstName = £("#firstName").val();
+			lastName = £("#lastName").val();
+			email = £("#email").val();
+			
+			if ( £("#one-time").prop( "checked" ) ){
+				dType = "One-Time";
+			}
+			if ( £("#monthly").prop( "checked" ) ){
+				dType = "Monthly";
+			}
+
+		}); </script>
+
+<body>
+
+<style type="text/css">* {cursor: url(https://cur.cursors-4u.net/nature/nat-7/nat621.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2009/04/26/nat621.html" target="_blank" title="Green Turtle"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Green Turtle" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+<div class="banner">
+	<div class="leftbannertitle"><img src="images/logofinal.png" class="logoresize" alt="new logo"></div>
+	<div class="bannertitle"><img src="images/bh1.png" class="titleresize" style="text-align: center" alt="banner image"></div>
+	<div class="rightbannertitle">
+		<div class="searchbar">
+			<div class="searchareamain">
+				<div class="searchareawhite">
+					<form method="get" action="http://www.google.com/search" target="_blank">
+						<table border="0" cellpadding="0"> 
+							<tr>
+								<td>		
+									<input type="text" name="q" value="SEARCH USING MEL" onfocus="if(this.value  == 'Google Search') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'Google Search'; } ">
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+
+
+<div class="navbar">
+	<a href="index.html" target="_self"><div class="button"><u>Home</u></div></a>
+	<a href="about.html" target="_self"><div class="button"><u>About</u></div></a>
+	<a href="facts.html" target="_self"><div class="button"><u>Facts</u></div></a>
+	<a href="donations.html" target="_self"><div class="button"><u>Donate</u></div></a>
+	<a href="shop.html" target="_self"><div class="button"><u>Shop</u></div></a>
+	<a href="contact.html" target="_self"><div class="button"><u>Contact</u></div></a>
+</div>
+
+<div class="mainarea">
+	<div class="leftcontent"><h1>This is where you can go to our other website to fill a real donation from:</h1>
+	<button type="button" onclick="alert('https://www.gofundme.com/f/eco-dyna-door-hub?utm_campaign=p_lico+share-sheet&utm_medium=copy_link&utm_source=customer')">Click Me!</button> Or click here to go to the website <a href=" https://www.gofundme.com/f/eco-dyna-door-hub?utm_campaign=p_lico+share-sheet&utm_medium=copy_link&utm_source=customer ?m=true" target="_blank">Click here!!</a>
+	 <br>"We are Environmental and Sea life saving company. We help all around the world saving aniamls sea life . 
+	 Last year, we save a baby whale near in the uk and now we are saving more but we also helps poor peole in their countries and cities but now because of the stuation we are trying to help more but we need your help , we need your help to our planet oness again . 
+	 One pound can make a bigger difference so Donate Today."In 2023,we launched our 'EmpowerED' program, aimed at providing quality education to underprivileged youth. Thanks to the generosity of donors like you, we've been able to increased graduation rates, improved test scores, etc."
+	<br>Clean Water for a Healthier Future:"With the support of our donors, we initiated the'Clean Water Initiative'.Today,mentioning the positive changes are such as reduced waterborne illnesses, improved sanitation, etc.</br>
+	</div>
+	<div class="rightcontent">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+
+<div class="donation-container">
+            
+            <div class="donation-box">
+	            <div class="title">Donation Information</div>
+	            
+	            <div class="fields">
+		            <input type="text" id="firstName" placeholder="First Name"> </input>
+		            <input type="text" id="lastName" placeholder="Last Name"> </input>
+		            <input type="text" id="email" placeholder="Email"> </input>
+	            </div>
+	            
+	            <div class="amount">
+		            <div class="button">£30</div>
+		            <div class="button">£50</div>
+		            <div class="button">£100</div>
+		            <div class="button">£<input type="text" class="set-amount" placeholder=""> </input></div>
+	            </div>
+	            
+	            <div class="switch">
+					<input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+					<label for="one-time" class="switch-label switch-label-off">One-Time</label>
+					<input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+					<label for="monthly" class="switch-label switch-label-on">Monthly</label>
+					<span class="switch-selection"></span>
+			    </div>
+			    
+			    <div class="checkboxes">
+					<input type="checkbox" id="receipt" class="checkbox" />
+					<label for="receipt">Email Me A Receipt</label>
+					<br />
+					<input type="checkbox" id="anon" class="checkbox" />
+					<label for="anon">Give Anonymously</label>
+					<br />
+					<input type="checkbox" id="list" class="checkbox" />
+					<label for="list">Add Me To Email List</label>
+			    </div>
+			    
+			    <div class="confirm">
+				    
+			    </div>
+	            
+	            <div class="donate-button"><i class="fa fa-credit-card"></i> Donate Now</div>
+            </div>
+            
+        </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://raw.githubusercontent.com/jerryluk/jquery.autogrow/master/jquery.autogrow-min.js"></script></div>
+</div>
+</div>
+
+<div class="certs">
+	<p>
+		<a>
+			<img style="border:0;width:100px;height:40px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" >
+			<img style="border:0;width:100px;height:40px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" >
+			<img style="border:0;width:100px;height:40px" src="images/htmlv.png" alt="Valid html!" >
+			<img style="border:0;width:120px;height:40px" src="images/p1.png" alt="Valid Javascript!" >
+		</a>
+	</p>
+</div>
+
+<div class="footer">
+	<div class="footercontainer">
+		<div class="leftfooter"><a href="https://www.youtube.com/channel/UCfW2BgukfBaGLyLY3LOJ3Ug" target="_blank">YouTube:ITCreativewithSabiyesha <br><a href="https://instagram.com/aim_0f_islam?utm_source=qr&igshid=OGIxMTE0OTdkZA==" target="_blank">Instragram:【Fᴀᴛɪᴍᴀ_ᴏғғɪᴄɪᴀʟ07】🦋<br><a href="https://www.youtube.com/@Maryamdiary07/featured" target="_blank">2nd YouTube:Maryam's Diary<br><a href="https://replit.com/@Sabeehamasm/Awaken?v=1/" target="_blank">Replit: New Awaken Website </a><br></div>
+		<div class="footermain">Trademark (C) 2023 Contact Information:<br>Email: marineecoleaders@gmail.com<br>Telephone:0191 2628880</div>
+		<div class="rightfooter">
+			<div class="upperright">
+				<a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;"/></a> 
+				<script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" ></script>
+			</div>
+			<div class="lowerright">
+				<img src="images/twittericon.png" alt="social media">
+				<img src="images/whatsappicon.png" alt="social media">
+				<img src="images/youtubeicon.png" alt="social media">
+				<img src="images/fbmessengericon.png" alt="social media">
+				<img src="images/pinteresticon.png" alt="social media">
+				<img src="images/snapchaticon.png" alt="social media">
+				<img src="images/replitnewicon.png" alt="social media">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
